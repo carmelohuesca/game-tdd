@@ -11,15 +11,31 @@ Game.prototype.init = function(playerOne, playerTwo) {
         SCISSORS: 'tijeras'
     };
     this.RESULTS = {
-        DRAW: 'empate'
+        DRAW: 'empate',
+        PLAYERONEWINS: 'gana el jugador 1',
+        PLAYERTWOWINS: 'gana el jugador 2'
     };
     this.rounds = 0;
 };
 
 Game.prototype.round = function(choiceOne, choiceTwo) {
+    this.logic(choiceOne, choiceTwo);
     this.rounds++;
+    return this.result;
+};
+
+Game.prototype.logic = function(choiceOne, choiceTwo) {
     if (choiceOne === choiceTwo) {
         this.result = this.RESULTS.DRAW;
+    } else {
+        switch (choiceOne) {
+            case this.CHOICES.ROCK:
+                this.rock(choiceOne, choiceTwo);
+                break;
+        }
     }
-    return this.result;
+};
+
+Game.prototype.rock = function(choiceOne, choiceTwo) {
+    this.result = (choiceTwo === this.CHOICES.SCISSORS) ? this.RESULTS.PLAYERONEWINS : this.RESULTS.PLAYERTWOWINS;
 };

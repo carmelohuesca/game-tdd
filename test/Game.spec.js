@@ -12,7 +12,9 @@ describe('Especificaciones del juego Piedra-Papel-Tijera:', function() {
     };
 
     var RESULTS = {
-        DRAW: 'empate'
+        DRAW: 'empate', 
+        PLAYERONEWINS: 'gana el jugador 1',
+        PLAYERTWOWINS: 'gana el jugador 2'
     };
 
     beforeEach(function() {
@@ -46,21 +48,21 @@ describe('Especificaciones del juego Piedra-Papel-Tijera:', function() {
         });
     });
 
-    // describe('Gana el jugador 1 cuando:', function() {
+    describe('Gana el jugador 1 cuando:', function() {
 
-    //     it('el jugador 1 elige "piedra" y el jugador 2 elige "tijeras"', function() {
+        it('el jugador 1 elige "piedra" y el jugador 2 elige "tijeras"', function() {
+            expect(game.round(CHOICES.ROCK, CHOICES.SCISSORS)).toBe(RESULTS.PLAYERONEWINS);
+        });
 
-    //     });
+        xit('el jugador 1 elige "papel" y el jugador 2 elige "piedra"', function() {
+            expect(game.round(CHOICES.PAPER, CHOICES.ROCK)).toBe(RESULTS.PLAYERONEWINS);
+        });
 
-    //     it('el jugador 1 elige "papel" y el jugador 2 elige "piedra"', function() {
+        xit('el jugador 1 elige "tijeras" y el jugador 2 elige "papel"', function() {
+            expect(game.round(CHOICES.SCISSORS, CHOICES.PAPER)).toBe(RESULTS.PLAYERONEWINS);
+        });
 
-    //     });
-
-    //     it('el jugador 1 elige "tijeras" y el jugador 2 elige "papel"', function() {
-
-    //     });
-
-    // });
+    });
 
     // describe('Gana el jugador 2 cuando:', function() {
 
