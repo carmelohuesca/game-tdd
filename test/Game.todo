@@ -8,7 +8,7 @@ Especificaciones del juego Piedra-Papel-Tijera:
   Gana el jugador 1 cuando:
   ✔ el jugador 1 elige "piedra" y el jugador 2 elige "tijeras" @done (16-12-23 00:08)
   ✔ el jugador 1 elige "papel" y el jugador 2 elige "piedra" @done (16-12-23 00:11)
-  ☐ el jugador 1 elige "tijeras" y el jugador 2 elige "papel"
+  ✔ el jugador 1 elige "tijeras" y el jugador 2 elige "papel" @done (16-12-23 00:13)
   Gana el jugador 2 cuando:
   ☐ el jugador 1 elige "piedra" y el jugador 2 elige "papel"
   ☐ el jugador 1 elige "papel" y el jugador 2 elige "tijeras"
