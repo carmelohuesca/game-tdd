@@ -32,10 +32,17 @@ Game.prototype.logic = function(choiceOne, choiceTwo) {
             case this.CHOICES.ROCK:
                 this.rock(choiceOne, choiceTwo);
                 break;
+            case this.CHOICES.PAPER:
+                this.paper(choiceOne, choiceTwo);
+                break;
         }
     }
 };
 
 Game.prototype.rock = function(choiceOne, choiceTwo) {
     this.result = (choiceTwo === this.CHOICES.SCISSORS) ? this.RESULTS.PLAYERONEWINS : this.RESULTS.PLAYERTWOWINS;
+};
+
+Game.prototype.paper = function(choiceOne, choiceTwo) {
+    this.result = (choiceTwo === this.CHOICES.ROCK) ? this.RESULTS.PLAYERONEWINS : this.RESULTS.PLAYERTWOWINS;
 };

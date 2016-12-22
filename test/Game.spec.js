@@ -54,7 +54,7 @@ describe('Especificaciones del juego Piedra-Papel-Tijera:', function() {
             expect(game.round(CHOICES.ROCK, CHOICES.SCISSORS)).toBe(RESULTS.PLAYERONEWINS);
         });
 
-        xit('el jugador 1 elige "papel" y el jugador 2 elige "piedra"', function() {
+        it('el jugador 1 elige "papel" y el jugador 2 elige "piedra"', function() {
             expect(game.round(CHOICES.PAPER, CHOICES.ROCK)).toBe(RESULTS.PLAYERONEWINS);
         });
 
