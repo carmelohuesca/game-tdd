@@ -10,4 +10,11 @@ Game.prototype.init = function(playerOne, playerTwo) {
         PAPER: 'papel',
         SCISSORS: 'tijeras'
     };
+    this.rounds = 0;
 };
+
+Game.prototype.round = function() {
+    this.rounds++;
+};
+
+

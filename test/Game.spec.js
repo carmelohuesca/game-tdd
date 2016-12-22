@@ -16,24 +16,22 @@ describe('Especificaciones del juego Piedra-Papel-Tijera:', function() {
     });
 
     describe('Al principio:', function() {
-
         it('el juego se inicia con dos jugadores', function() {
             expect(game).toBeDefined();
             expect(game.playerOne).toBe(PLAYERONE);
             expect(game.playerTwo).toBe(PLAYERTWO);
         });
-
         it('el juego tiene tres opciones inicialmente (piedra, papel, tijera)', function() {
             expect(game.CHOICES).toBeDefined();
             expect(game.CHOICES.ROCK).toBe(CHOICES.ROCK);
             expect(game.CHOICES.PAPER).toBe(CHOICES.PAPER);
             expect(game.CHOICES.SCISSORS).toBe(CHOICES.SCISSORS);
         });
-
-        xit('se incrementa el número de ronda en cada de tirada', function() {
-
+        it('se incrementa el número de ronda en cada de tirada', function() {
+            expect(game.rounds).toBe(0);
+            game.round();
+            expect(game.rounds).toBe(1);
         });
-
     });
 
     // describe('Empatan cuando:', function() {
