@@ -49,6 +49,8 @@ Game.prototype.rock = function(choiceOne, choiceTwo) {
 Game.prototype.paper = function(choiceOne, choiceTwo) {
     this.result = (choiceTwo === this.CHOICES.ROCK) ? this.RESULTS.PLAYERONEWINS : this.RESULTS.PLAYERTWOWINS;
 };
+
 Game.prototype.scissors = function(choiceOne, choiceTwo) {
     this.result = (choiceTwo === this.CHOICES.PAPER) ? this.RESULTS.PLAYERONEWINS : this.RESULTS.PLAYERTWOWINS;
 };
+
