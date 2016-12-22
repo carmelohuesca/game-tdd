@@ -1,0 +1,19 @@
+{
+  "name": "game-tdd",
+  "version": "1.0.0",
+  "description": "Juego desarrollado en TDD",
+  "main": "index.js",
+  "scripts": {
+    "test": "karma start"
+  },
+  "author": "carmelohuesca",
+  "license": "MIT",
+  "devDependencies": {
+    "jasmine": "^2.5.2",
+    "karma": "^1.3.0",
+    "karma-chrome-launcher": "^2.0.0",
+    "karma-firefox-launcher": "^1.0.0",
+    "karma-jasmine": "^1.1.0",
+    "karma-safari-launcher": "^1.0.0"
+  }
+}

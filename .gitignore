@@ -1,0 +1,4 @@
+# paquetes de npm 
+node_modules
+# archivos de entorno
+.env

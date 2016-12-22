@@ -1,0 +1,15 @@
+Especificaciones del juego Piedra-Papel-Tijera:
+  Al principio:
+  ✔ el juego se inicia con dos jugadores @done (16-12-22 23:28)
+  ☐ el juego tiene tres opciones inicialmente (piedra, papel, tijera)
+  ☐ se incrementa el número de ronda en cada de tirada
+  Empatan cuando:
+  ☐ los dos jugadores eligen la misma opción
+  Gana el jugador 1 cuando:
+  ☐ el jugador 1 elige "piedra" y el jugador 2 elige "tijeras"
+  ☐ el jugador 1 elige "papel" y el jugador 2 elige "piedra"
+  ☐ el jugador 1 elige "tijeras" y el jugador 2 elige "papel"
+  Gana el jugador 2 cuando:
+  ☐ el jugador 1 elige "piedra" y el jugador 2 elige "papel"
+  ☐ el jugador 1 elige "papel" y el jugador 2 elige "tijeras"
+  ☐ el jugador 1 elige "tijeras" y el jugador 2 elige "piedra"
