@@ -37,15 +37,18 @@ describe('Especificaciones del juego Piedra-Papel-Tijera-Lagarto-Spock:', functi
         });
 
     });
+
+    describe('Empatan cuando:', function() {
+        it('los dos jugadores eligen la misma opción', function() {
+            expect(game.round(CHOICES.ROCK, CHOICES.ROCK)).toBe(RESULTS.DRAW);
+            expect(game.round(CHOICES.PAPER, CHOICES.PAPER)).toBe(RESULTS.DRAW);
+            expect(game.round(CHOICES.SCISSORS, CHOICES.SCISSORS)).toBe(RESULTS.DRAW);
+            expect(game.round(CHOICES.LIZARD, CHOICES.LIZARD)).toBe(RESULTS.DRAW);
+            expect(game.round(CHOICES.SPOCK, CHOICES.SPOCK)).toBe(RESULTS.DRAW);
+        });
+    });
+
 });
-// describe('Empatan cuando:', function() {
-
-//     it('los dos jugadores eligen la misma opción', function() {
-
-//     });
-
-// });
-
 // describe('Gana el jugador 1 cuando:', function() {
 
 //     it('el jugador 1 elige "piedra" y el jugador 2 elige "tijeras"', function() {
