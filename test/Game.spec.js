@@ -5,20 +5,12 @@ describe('Especificaciones del juego Piedra-Papel-Tijera:', function() {
     var PLAYERONE = 'juan',
         PLAYERTWO = 'pedro';
 
-    var CHOICES = {
-        ROCK: 'piedra',
-        PAPER: 'papel',
-        SCISSORS: 'tijeras'
-    };
-
-    var RESULTS = {
-        DRAW: 'empate',
-        PLAYERONEWINS: 'gana el jugador 1',
-        PLAYERTWOWINS: 'gana el jugador 2'
-    };
+    var CHOICES, RESULTS;
 
     beforeEach(function() {
         game = new Game(PLAYERONE, PLAYERTWO);
+        CHOICES = game.CHOICES;
+        RESULTS = game.RESULTS;
     });
 
     describe('Al principio:', function() {

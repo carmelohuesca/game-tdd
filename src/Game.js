@@ -12,8 +12,8 @@ Game.prototype.init = function(playerOne, playerTwo) {
     };
     this.RESULTS = {
         DRAW: 'empate',
-        PLAYERONEWINS: 'gana el jugador 1',
-        PLAYERTWOWINS: 'gana el jugador 2'
+        PLAYERONEWINS: 'gana ' + this.playerOne,
+        PLAYERTWOWINS: 'gana ' + this.playerTwo
     };
     this.rounds = 0;
 };
@@ -30,27 +30,30 @@ Game.prototype.logic = function(choiceOne, choiceTwo) {
     } else {
         switch (choiceOne) {
             case this.CHOICES.ROCK:
-                this.rock(choiceOne, choiceTwo);
+                this.rock(choiceTwo);
                 break;
             case this.CHOICES.PAPER:
-                this.paper(choiceOne, choiceTwo);
+                this.paper(choiceTwo);
                 break;
             case this.CHOICES.SCISSORS:
-                this.scissors(choiceOne, choiceTwo);
+                this.scissors(choiceTwo);
                 break;
         }
     }
 };
 
-Game.prototype.rock = function(choiceOne, choiceTwo) {
-    this.result = (choiceTwo === this.CHOICES.SCISSORS) ? this.RESULTS.PLAYERONEWINS : this.RESULTS.PLAYERTWOWINS;
+Game.prototype.rock = function(choiceTwo) {
+    this.winsTo(choiceTwo, this.CHOICES.SCISSORS);
 };
 
-Game.prototype.paper = function(choiceOne, choiceTwo) {
-    this.result = (choiceTwo === this.CHOICES.ROCK) ? this.RESULTS.PLAYERONEWINS : this.RESULTS.PLAYERTWOWINS;
+Game.prototype.paper = function(choiceTwo) {
+    this.winsTo(choiceTwo, this.CHOICES.ROCK);
 };
 
-Game.prototype.scissors = function(choiceOne, choiceTwo) {
-    this.result = (choiceTwo === this.CHOICES.PAPER) ? this.RESULTS.PLAYERONEWINS : this.RESULTS.PLAYERTWOWINS;
+Game.prototype.scissors = function(choiceTwo) {
+    this.winsTo(choiceTwo, this.CHOICES.PAPER);
 };
 
+Game.prototype.winsTo = function(choiceTwo, losserChoice) {
+    this.result = (choiceTwo === losserChoice) ? this.RESULTS.PLAYERONEWINS : this.RESULTS.PLAYERTWOWINS;
+};
