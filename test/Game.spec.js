@@ -8,7 +8,7 @@ describe('Especificaciones del juego Piedra-Papel-Tijera:', function() {
     var CHOICES, RESULTS;
 
     beforeEach(function() {
-        game = new Game(PLAYERONE, PLAYERTWO);
+        game = new moduleGame.Game(PLAYERONE, PLAYERTWO);
         CHOICES = game.CHOICES;
         RESULTS = game.RESULTS;
     });
