@@ -10,11 +10,16 @@ Game.prototype.init = function(playerOne, playerTwo) {
         PAPER: 'papel',
         SCISSORS: 'tijeras'
     };
+    this.RESULTS = {
+        DRAW: 'empate'
+    };
     this.rounds = 0;
 };
 
-Game.prototype.round = function() {
+Game.prototype.round = function(choiceOne, choiceTwo) {
     this.rounds++;
+    if (choiceOne === choiceTwo) {
+        this.result = this.RESULTS.DRAW;
+    }
+    return this.result;
 };
-
-

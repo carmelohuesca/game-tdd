@@ -11,6 +11,10 @@ describe('Especificaciones del juego Piedra-Papel-Tijera:', function() {
         SCISSORS: 'tijeras'
     };
 
+    var RESULTS = {
+        DRAW: 'empate'
+    };
+
     beforeEach(function() {
         game = new Game(PLAYERONE, PLAYERTWO);
     });
@@ -34,13 +38,13 @@ describe('Especificaciones del juego Piedra-Papel-Tijera:', function() {
         });
     });
 
-    // describe('Empatan cuando:', function() {
-
-    //     it('los dos jugadores eligen la misma opción', function() {
-
-    //     });
-
-    // });
+    describe('Empatan cuando:', function() {
+        it('los dos jugadores eligen la misma opción', function() {
+            expect(game.round(CHOICES.ROCK, CHOICES.ROCK)).toBe(RESULTS.DRAW);
+            expect(game.round(CHOICES.PAPER, CHOICES.PAPER)).toBe(RESULTS.DRAW);
+            expect(game.round(CHOICES.SCISSORS, CHOICES.SCISSORS)).toBe(RESULTS.DRAW);
+        });
+    });
 
     // describe('Gana el jugador 1 cuando:', function() {
 
