@@ -7,7 +7,7 @@ Especificaciones del juego SpockGame:
   Gana el jugador 1 cuando:
   ✔ el jugador 1 elige "piedra" y el jugador 2 elige "tijeras" @done (16-12-23 01:11)
   ✔ el jugador 1 elige "papel" y el jugador 2 elige "piedra" @done (16-12-23 01:11)
-  ☐ el jugador 1 elige "papel" y el jugador 2 elige "spock"
+  ✔ el jugador 1 elige "papel" y el jugador 2 elige "spock" @done (16-12-23 21:10)
   ✔ el jugador 1 elige "tijeras" y el jugador 2 elige "papel" @done (16-12-23 01:11)
   ✔ el jugador 1 elige "piedra" y el jugador 2 elige "lagarto" @done (16-12-23 01:11)
   ✔ el jugador 1 elige "tijeras" y el jugador 2 elige "lagarto" @done (16-12-23 01:11)

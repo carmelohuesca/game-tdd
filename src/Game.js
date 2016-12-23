@@ -35,18 +35,18 @@ var moduleGame = (function() {
         if (choiceOne === choiceTwo) {
             this.result = this.RESULTS.DRAW;
         } else {
-            switch (choiceOne) {
-                case this.CHOICES.ROCK:
-                    this.rock(choiceTwo);
-                    break;
-                case this.CHOICES.PAPER:
-                    this.paper(choiceTwo);
-                    break;
-                case this.CHOICES.SCISSORS:
-                    this.scissors(choiceTwo);
-                    break;
-            }
+            this[this.getKeyFromChoice(choiceOne)](choiceTwo);
         }
+    };
+
+    Game.prototype.getKeyFromChoice = function(choice) {
+        var result;
+        Object.keys(CHOICES).forEach(function(value, key) {
+            if (CHOICES[value] === choice) {
+                result = value.toLowerCase();
+            }
+        });
+        return result;
     };
 
     Game.prototype.rock = function(choice) {
@@ -73,31 +73,6 @@ var moduleGame = (function() {
 
     SpockGame.prototype = Object.create(Game.prototype);
     SpockGame.prototype.constructor = SpockGame;
-
-
-    SpockGame.prototype.logic = function(choiceOne, choiceTwo) {
-        if (choiceOne === choiceTwo) {
-            this.result = this.RESULTS.DRAW;
-        } else {
-            switch (choiceOne) {
-                case this.CHOICES.ROCK:
-                    this.rock(choiceTwo);
-                    break;
-                case this.CHOICES.PAPER:
-                    this.paper(choiceTwo);
-                    break;
-                case this.CHOICES.SCISSORS:
-                    this.scissors(choiceTwo);
-                    break;
-                case this.CHOICES.LIZARD:
-                    this.lizard(choiceTwo);
-                    break;
-                case this.CHOICES.SPOCK:
-                    this.spock(choiceTwo);
-                    break;
-            }
-        }
-    };
 
     Game.prototype.rock = function(choice) {
         this.winsTo(choice, this.CHOICES.SCISSORS, this.CHOICES.LIZARD);
@@ -127,8 +102,6 @@ var moduleGame = (function() {
         Game: Game,
         SpockGame: SpockGame
     };
-
-
 
     return moduleGame;
 }());
