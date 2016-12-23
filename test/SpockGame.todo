@@ -7,6 +7,7 @@ Especificaciones del juego SpockGame:
   Gana el jugador 1 cuando:
   ✔ el jugador 1 elige "piedra" y el jugador 2 elige "tijeras" @done (16-12-23 01:11)
   ✔ el jugador 1 elige "papel" y el jugador 2 elige "piedra" @done (16-12-23 01:11)
+  ☐ el jugador 1 elige "papel" y el jugador 2 elige "spock"
   ✔ el jugador 1 elige "tijeras" y el jugador 2 elige "papel" @done (16-12-23 01:11)
   ✔ el jugador 1 elige "piedra" y el jugador 2 elige "lagarto" @done (16-12-23 01:11)
   ✔ el jugador 1 elige "tijeras" y el jugador 2 elige "lagarto" @done (16-12-23 01:11)
@@ -14,14 +15,14 @@ Especificaciones del juego SpockGame:
   ✔ el jugador 1 elige "lagarto" y el jugador 2 elige "papel" @done (16-12-23 01:11)
   ✔ el jugador 1 elige "spock" y el jugador 2 elige "piedra" @done (16-12-23 01:11)
   ✔ el jugador 1 elige "spock" y el jugador 2 elige "tijeras" @done (16-12-23 01:11)
-  ✔ Gana el jugador 2 cuando: @done (16-12-23 01:11)
-  ☐ el jugador 1 elige "piedra" y el jugador 2 elige "papel"
-  ☐ el jugador 1 elige "papel" y el jugador 2 elige "tijeras"
-  ☐ el jugador 1 elige "tijeras" y el jugador 2 elige "piedra"
-  ☐ el jugador 1 elige "piedra" y el jugador 2 elige "spock"
-  ☐ el jugador 1 elige "papel" y el jugador 2 elige "lagarto"
-  ☐ el jugador 1 elige "papel" y el jugador 2 elige "spock"
-  ☐ el jugador 1 elige "tijeras" y el jugador 2 elige "spock"
-  ☐ el jugador 1 elige "lagarto" y el jugador 2 elige "piedra"
-  ☐ el jugador 1 elige "lagarto" y el jugador 2 elige "tijeras"
-  ☐ el jugador 1 elige "spock" y el jugador 2 elige "papel"
+  Gana el jugador 2 cuando:
+  ✔ el jugador 1 elige "piedra" y el jugador 2 elige "papel" @done (16-12-23 01:19)
+  ✔ el jugador 1 elige "papel" y el jugador 2 elige "tijeras" @done (16-12-23 01:19)
+  ✔ el jugador 1 elige "tijeras" y el jugador 2 elige "piedra" @done (16-12-23 01:19)
+  ✔ el jugador 1 elige "piedra" y el jugador 2 elige "spock" @done (16-12-23 01:19)
+  ✔ el jugador 1 elige "papel" y el jugador 2 elige "lagarto" @done (16-12-23 01:19)
+  ✔ el jugador 1 elige "tijeras" y el jugador 2 elige "spock" @done (16-12-23 01:19)
+  ✔ el jugador 1 elige "lagarto" y el jugador 2 elige "piedra" @done (16-12-23 01:19)
+  ✔ el jugador 1 elige "lagarto" y el jugador 2 elige "tijeras" @done (16-12-23 01:19)
+  ✔ el jugador 1 elige "spock" y el jugador 2 elige "papel" @done (16-12-23 01:19)
+  ✔ el jugador 1 elige "spock" y el jugador 2 elige "lagarto" @done (16-12-23 01:19)
