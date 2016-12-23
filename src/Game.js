@@ -32,16 +32,19 @@ var moduleGame = (function() {
     };
 
     Game.prototype.logic = function(choiceOne, choiceTwo) {
+        var keyFromChoice;
         if (choiceOne === choiceTwo) {
             this.result = this.RESULTS.DRAW;
         } else {
-            this[this.getKeyFromChoice(choiceOne)](choiceTwo);
+            keyFromChoice = this.getKeyFromChoice(choiceOne);
+            this[keyFromChoice](choiceTwo);
         }
     };
 
     Game.prototype.getKeyFromChoice = function(choice) {
+        var keyList = Object.keys(CHOICES);
         var result;
-        Object.keys(CHOICES).forEach(function(value, key) {
+        keyList.forEach(function(value, key) {
             if (CHOICES[value] === choice) {
                 result = value.toLowerCase();
             }
