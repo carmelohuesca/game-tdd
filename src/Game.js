@@ -5,7 +5,7 @@ var moduleGame = (function() {
         ROCK: 'piedra',
         PAPER: 'papel',
         SCISSORS: 'tijeras',
-        LIZARD: 'lagarto', 
+        LIZARD: 'lagarto',
         SPOCK: 'spock'
     };
 
@@ -49,20 +49,20 @@ var moduleGame = (function() {
         }
     };
 
-    Game.prototype.rock = function(choiceTwo) {
-        this.winsTo(choiceTwo, this.CHOICES.SCISSORS);
+    Game.prototype.rock = function(choice) {
+        this.winsTo(choice, this.CHOICES.SCISSORS);
     };
 
-    Game.prototype.paper = function(choiceTwo) {
-        this.winsTo(choiceTwo, this.CHOICES.ROCK);
+    Game.prototype.paper = function(choice) {
+        this.winsTo(choice, this.CHOICES.ROCK);
     };
 
-    Game.prototype.scissors = function(choiceTwo) {
-        this.winsTo(choiceTwo, this.CHOICES.PAPER);
+    Game.prototype.scissors = function(choice) {
+        this.winsTo(choice, this.CHOICES.PAPER);
     };
 
-    Game.prototype.winsTo = function(choiceTwo, losserChoice) {
-        this.result = (choiceTwo === losserChoice) ? this.RESULTS.PLAYERONEWINS : this.RESULTS.PLAYERTWOWINS;
+    Game.prototype.winsTo = function(choice, losserChoice) {
+        this.result = (choice === losserChoice) ? this.RESULTS.PLAYERONEWINS : this.RESULTS.PLAYERTWOWINS;
     };
 
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -74,10 +74,61 @@ var moduleGame = (function() {
     SpockGame.prototype = Object.create(Game.prototype);
     SpockGame.prototype.constructor = SpockGame;
 
+
+    SpockGame.prototype.logic = function(choiceOne, choiceTwo) {
+        if (choiceOne === choiceTwo) {
+            this.result = this.RESULTS.DRAW;
+        } else {
+            switch (choiceOne) {
+                case this.CHOICES.ROCK:
+                    this.rock(choiceTwo);
+                    break;
+                case this.CHOICES.PAPER:
+                    this.paper(choiceTwo);
+                    break;
+                case this.CHOICES.SCISSORS:
+                    this.scissors(choiceTwo);
+                    break;
+                case this.CHOICES.LIZARD:
+                    this.lizard(choiceTwo);
+                    break;
+                case this.CHOICES.SPOCK:
+                    this.spock(choiceTwo);
+                    break;
+            }
+        }
+    };
+
+    Game.prototype.rock = function(choice) {
+        this.winsTo(choice, this.CHOICES.SCISSORS, this.CHOICES.LIZARD);
+    };
+
+    Game.prototype.paper = function(choice) {
+        this.winsTo(choice, this.CHOICES.ROCK, this.CHOICES.SPOCK);
+    };
+
+    Game.prototype.scissors = function(choice) {
+        this.winsTo(choice, this.CHOICES.PAPER, this.CHOICES.LIZARD);
+    };
+
+    Game.prototype.lizard = function(choice) {
+        this.winsTo(choice, this.CHOICES.PAPER, this.CHOICES.SPOCK);
+    };
+
+    Game.prototype.spock = function(choice) {
+        this.winsTo(choice, this.CHOICES.ROCK, this.CHOICES.SCISSORS);
+    };
+
+    Game.prototype.winsTo = function(choice, losserChoice, secondLosserChoice) {
+        this.result = (choice === losserChoice || choice === secondLosserChoice) ? this.RESULTS.PLAYERONEWINS : this.RESULTS.PLAYERTWOWINS;
+    };
+
     var moduleGame = {
         Game: Game,
         SpockGame: SpockGame
     };
+
+
 
     return moduleGame;
 }());

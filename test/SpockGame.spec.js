@@ -48,46 +48,40 @@ describe('Especificaciones del juego Piedra-Papel-Tijera-Lagarto-Spock:', functi
         });
     });
 
+    describe('Gana el jugador 1 cuando:', function() {
+        it('el jugador 1 elige "piedra" y el jugador 2 elige "tijeras"', function() {
+            expect(game.round(CHOICES.ROCK, CHOICES.SCISSORS)).toBe(RESULTS.PLAYERONEWINS);
+        });
+        it('el jugador 1 elige "papel" y el jugador 2 elige "piedra"', function() {
+            expect(game.round(CHOICES.PAPER, CHOICES.ROCK)).toBe(RESULTS.PLAYERONEWINS);
+        });
+        it('el jugador 1 elige "tijeras" y el jugador 2 elige "papel"', function() {
+            expect(game.round(CHOICES.SCISSORS, CHOICES.PAPER)).toBe(RESULTS.PLAYERONEWINS);
+        });
+        it('el jugador 1 elige "piedra" y el jugador 2 elige "lagarto"', function() {
+            expect(game.round(CHOICES.ROCK, CHOICES.LIZARD)).toBe(RESULTS.PLAYERONEWINS);
+        });
+        it('el jugador 1 elige "tijeras" y el jugador 2 elige "lagarto"', function() {
+            expect(game.round(CHOICES.SCISSORS, CHOICES.LIZARD)).toBe(RESULTS.PLAYERONEWINS);
+        });
+        it('el jugador 1 elige "lagarto" y el jugador 2 elige "spock"', function() {
+            expect(game.round(CHOICES.LIZARD, CHOICES.SPOCK)).toBe(RESULTS.PLAYERONEWINS);
+        });
+        it('el jugador 1 elige "lagarto" y el jugador 2 elige "papel"', function() {
+            expect(game.round(CHOICES.LIZARD, CHOICES.PAPER)).toBe(RESULTS.PLAYERONEWINS);
+        });
+
+        it('el jugador 1 elige "spock" y el jugador 2 elige "piedra"', function() {
+            expect(game.round(CHOICES.SPOCK, CHOICES.ROCK)).toBe(RESULTS.PLAYERONEWINS);
+        });
+
+        it('el jugador 1 elige "spock" y el jugador 2 elige "tijeras"', function() {
+            expect(game.round(CHOICES.SPOCK, CHOICES.SCISSORS)).toBe(RESULTS.PLAYERONEWINS);
+        });
+
+    });
+
 });
-// describe('Gana el jugador 1 cuando:', function() {
-
-//     it('el jugador 1 elige "piedra" y el jugador 2 elige "tijeras"', function() {
-
-//     });
-
-//     it('el jugador 1 elige "papel" y el jugador 2 elige "piedra"', function() {
-
-//     });
-
-//     it('el jugador 1 elige "tijeras" y el jugador 2 elige "papel"', function() {
-
-//     });
-
-//     it('el jugador 1 elige "piedra" y el jugador 2 elige "lagarto"', function() {
-
-//     });
-
-//     it('el jugador 1 elige "tijeras" y el jugador 2 elige "lagarto"', function() {
-
-//     });
-
-//     it('el jugador 1 elige "lagarto" y el jugador 2 elige "spock"', function() {
-
-//     });
-
-//     it('el jugador 1 elige "lagarto" y el jugador 2 elige "papel"', function() {
-
-//     });
-
-//     it('el jugador 1 elige "spock" y el jugador 2 elige "piedra"', function() {
-
-//     });
-
-//     it('el jugador 1 elige "spock" y el jugador 2 elige "tijeras"', function() {
-
-//     });
-
-// });
 
 // describe('Gana el jugador 2 cuando:', function() {
 
