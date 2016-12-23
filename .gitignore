@@ -1,6 +1,8 @@
-# paquetes de npm 
+# paquetes de npm
 node_modules
 # archivos de entorno
 .env
 # documentacion
 docs
+# cobertura de codigo
+coverage

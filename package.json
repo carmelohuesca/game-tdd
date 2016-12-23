@@ -1,24 +1,26 @@
 {
-    "name": "game-tdd",
-    "version": "1.0.0",
-    "description": "Juego desarrollado en TDD",
-    "main": "index.js",
-    "scripts": {
-        "test": "karma start",
-        "test-single":"karma start --single-run",
-        "jsdoc": "jsdoc ./src -r -c ./jsdoc.json  -d ./docs", 
-        "opendocs":"open ./docs/index.html"
-    },
-    "author": "carmelohuesca",
-    "license": "MIT",
-    "devDependencies": {
-        "jasmine": "^2.5.2",
-        "jsdoc": "^3.4.3",
-        "karma": "^1.3.0",
-        "karma-chrome-launcher": "^2.0.0",
-        "karma-firefox-launcher": "^1.0.0",
-        "karma-jasmine": "^1.1.0",
-        "karma-jasmine-html-reporter": "^0.2.2",
-        "karma-safari-launcher": "^1.0.0"
-    }
+  "name": "game-tdd",
+  "version": "1.0.0",
+  "description": "Juego desarrollado en TDD",
+  "main": "index.js",
+  "scripts": {
+    "test": "karma start",
+    "test-single": "karma start --single-run",
+    "jsdoc": "jsdoc ./src -r -c ./jsdoc.json  -d ./docs",
+    "opendocs": "open ./docs/index.html"
+  },
+  "author": "carmelohuesca",
+  "license": "MIT",
+  "devDependencies": {
+    "jasmine": "^2.5.2",
+    "jsdoc": "^3.4.3",
+    "karma": "^1.3.0",
+    "karma-chrome-launcher": "^2.0.0",
+    "karma-coverage": "^1.1.1",
+    "karma-firefox-launcher": "^1.0.0",
+    "karma-jasmine": "^1.1.0",
+    "karma-jasmine-html-reporter": "^0.2.2",
+    "karma-jshint-preprocessor": "0.0.6",
+    "karma-safari-launcher": "^1.0.0"
+  }
 }
