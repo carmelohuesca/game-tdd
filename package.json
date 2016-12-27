@@ -2,13 +2,18 @@
   "name": "game-tdd",
   "version": "1.0.0",
   "description": "Juego desarrollado en TDD",
-  "main": "index.js",
+  "main": "./src/Game.js",
   "scripts": {
     "test": "karma start",
     "test-single": "karma start --single-run",
     "jsdoc": "jsdoc ./src -r -c ./jsdoc.json  -d ./docs",
-    "opendocs": "open ./docs/index.html"
+    "opendocs": "open ./docs/index.html",
+    "dist":"webpack"
   },
+  "files":[
+    "src",
+    "dist"
+  ],
   "author": "carmelohuesca",
   "license": "MIT",
   "devDependencies": {
@@ -21,6 +26,7 @@
     "karma-jasmine": "^1.1.0",
     "karma-jasmine-html-reporter": "^0.2.2",
     "karma-jshint-preprocessor": "0.0.6",
-    "karma-safari-launcher": "^1.0.0"
+    "karma-safari-launcher": "^1.0.0",
+    "webpack": "^1.14.0"
   }
 }

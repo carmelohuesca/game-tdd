@@ -6,3 +6,5 @@ node_modules
 docs
 # cobertura de codigo
 coverage
+# produccion
+dist
